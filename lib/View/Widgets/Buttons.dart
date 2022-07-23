@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class NormalButton extends StatelessWidget {
   final String text;
   final Color color;
-  const NormalButton(
-      {this.color = Colors.blueAccent, required this.text, Key? key})
+ void Function ()? onPressed;
+   NormalButton(
+      {this.color = Colors.blueAccent, required this.text, Key? key,this.onPressed})
       : super(key: key);
 
   @override
@@ -15,7 +16,7 @@ class NormalButton extends StatelessWidget {
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(15), color: color),
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
 
         // style: ButtonStyle(
         //     backgroundColor: MaterialStateProperty.all<Color>(color)),

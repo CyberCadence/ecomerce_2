@@ -2,11 +2,14 @@
 import 'package:ecomerce_2/View/Constants/constants.dart';
 import 'package:ecomerce_2/View/Widgets/Buttons.dart';
 import 'package:ecomerce_2/View/Widgets/TextWidget.dart';
+import 'package:ecomerce_2/View/authScreen/authscreen.dart';
 import 'package:flutter/material.dart';
+
+import 'package:get/route_manager.dart';
 import 'package:lottie/lottie.dart';
 
 class OnBoardScreen extends StatefulWidget {
-  OnBoardScreen({Key? key}) : super(key: key);
+  const OnBoardScreen({Key? key}) : super(key: key);
 
   @override
   State<OnBoardScreen> createState() => _OnBoardScreenState();
@@ -84,7 +87,8 @@ class Pageone extends StatelessWidget {
               color: Colors.grey, text: 'required products'),
           constants.height3,
           constants.height1,
-          const NormalButton(
+           NormalButton(
+            
             text: 'Next',
             color: Colors.green,
           )
@@ -125,7 +129,7 @@ class PageTwo extends StatelessWidget {
               color: Colors.grey, text: 'notifications'),
           constants.height3,
           constants.height1,
-          const NormalButton(
+           NormalButton(
             text: 'Next',
             color: Colors.green,
           )
@@ -166,7 +170,10 @@ class PageThree extends StatelessWidget {
               color: Colors.grey, text: 'order in under 24 hours'),
           constants.height3,
           constants.height1,
-          const NormalButton(
+           NormalButton(
+            onPressed: (){
+              Get.offAll(const AuthScreen());
+            },
             text: 'Get Started',
             color: Colors.green,
           )
