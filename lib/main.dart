@@ -1,11 +1,13 @@
+import 'package:ecomerce_2/View/authScreen/authscreen.dart';
 import 'package:ecomerce_2/View/onboardScreen/onboardscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'controller/dependency_injections.dart' as di;
 
-void main() {
-<<<<<<< HEAD
-  runApp(const GetMaterialApp(home: OnBoardScreen(),));
-=======
-  runApp(MaterialApp(home: OnBoardScreen()));
->>>>>>> 6eac9bd55bc026e0741c08fcf53630a834c03537
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
+  runApp(const GetMaterialApp(
+    home: AuthScreen(),
+  ));
 }
