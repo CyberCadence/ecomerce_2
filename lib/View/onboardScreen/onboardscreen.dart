@@ -171,7 +171,7 @@ class PageThree extends StatelessWidget {
           constants.height1,
            NormalButton(
             onPressed: (){
-              Get.offAll(const AuthScreen());
+              Get.offAll(()=> const AuthScreen());
             },
             text: 'Get Started',
             color: Colors.green,

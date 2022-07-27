@@ -1,9 +1,16 @@
+
+
 import 'package:ecomerce_2/View/authScreen/authwidgets/authtextfeild.dart';
+import 'package:ecomerce_2/View/mainScreen/mainscreen.dart';
+import 'package:ecomerce_2/View/productdetailscreen/productdetailscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
+
+  LoginPage({Key? key,}) : super(key: key);
   bool value = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,19 +54,22 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-          margin: EdgeInsets.only(bottom: h/40,top: 25),
-          alignment: Alignment.center,
-          height: 42,
-          width: 150,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8), color: Color(0XFF009B37)),
-          child: const Text("Login",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
-        )
+            InkWell(
+              onTap: (){Get.to(()=> MainScreen());},
+              child: Container(
+                      margin: EdgeInsets.only(bottom: h/40,top: 25),
+                      alignment: Alignment.center,
+                      height: 42,
+                      width: 150,
+                      decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8), color: Color(0XFF009B37)),
+                      child: const Text("Login",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold)),
+                    ),
+            )
           ],
         );
        
