@@ -73,10 +73,10 @@ class Pageone extends StatelessWidget {
             child: Lottie.asset('assets/animations/delivery2.json',
                 width: MediaQuery.of(context).size.width / 1.5),
           ),
-          constants.height2,
+          Sized.height2,
           const TitleTextWidget(size: 22, text: 'Shop for your Daily Needs '),
           const TitleTextWidget(size: 22, text: 'in Your Ease'),
-          constants.height3,
+          Sized.height3,
           const DescriptionTextWidget(
               color: Colors.grey,
               text: 'Set your delivery location.Choose your'),
@@ -84,10 +84,9 @@ class Pageone extends StatelessWidget {
               color: Colors.grey, text: 'groceries from a wide range of our'),
           const DescriptionTextWidget(
               color: Colors.grey, text: 'required products'),
-          constants.height3,
-          constants.height1,
-           NormalButton(
-            
+          Sized.height3,
+          Sized.height1,
+          NormalButton(
             text: 'Next',
             color: Colors.green,
           )
@@ -118,17 +117,17 @@ class PageTwo extends StatelessWidget {
             child: Lottie.asset('assets/animations/delivery3.json',
                 width: MediaQuery.of(context).size.width / 1.5),
           ),
-          constants.height2,
+          Sized.height2,
           const TitleTextWidget(size: 22, text: 'Real Time Reporting'),
-          constants.height3,
+          Sized.height3,
           const DescriptionTextWidget(
               color: Colors.grey,
               text: 'Keeping track of sales with real-time'),
           const DescriptionTextWidget(
               color: Colors.grey, text: 'notifications'),
-          constants.height3,
-          constants.height1,
-           NormalButton(
+          Sized.height3,
+          Sized.height1,
+          NormalButton(
             text: 'Next',
             color: Colors.green,
           )
@@ -159,19 +158,19 @@ class PageThree extends StatelessWidget {
             child: Lottie.asset('assets/animations/delivery1.json',
                 width: MediaQuery.of(context).size.width / 1.5),
           ),
-          constants.height2,
+          Sized.height2,
           const TitleTextWidget(size: 22, text: 'Fast Doorstep Deliveries '),
-          constants.height3,
+          Sized.height3,
           const DescriptionTextWidget(
               color: Colors.grey,
               text: 'Our delivery executive will deliver your '),
           const DescriptionTextWidget(
               color: Colors.grey, text: 'order in under 24 hours'),
-          constants.height3,
-          constants.height1,
-           NormalButton(
-            onPressed: (){
-              Get.offAll(()=> const AuthScreen());
+          Sized.height3,
+          Sized.height1,
+          NormalButton(
+            onPressed: () {
+              Get.offAll(() => const AuthScreen());
             },
             text: 'Get Started',
             color: Colors.green,
